@@ -3,41 +3,42 @@
   <head>
     <meta charset="UTF-8">
     <title>Header</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
-
-  <header>
-    <center>
-    <section class="logo-section">
-      <a href="index.html" target="_top">
-        <img src="images/sf-state-logo.png" alt="Company Logo" height="50"/>
-      </a>
-        <nav>
-          <a href="login.html" target="_top">Login</a>
-          <a href="cart.html" target="_top">Cart</a>
+  <body>
+    <header>
+      <div id="header-container">
+        <div id="logo">
+          <a href="index.html" target="_top">
+            <img src="images/sf-state-logo.png" alt="Company Logo" height="50">
+          </a>
+        </div>
+        <nav id="page-nav">
+          <a href="about.html" target="_top">About</a>
+          <a href="faq.html" target="_top">FAQ</a>
         </nav>
-        <br>
-      </section>
-      <form id="search-form">
-        <label for="searchQuery"></label>
-        <input type="text" id="searchQuery" placeholder="Search for products..."/>
-        <button type="submit">Search</button>
-      </form>
-      <br>
-      <nav id="pageNav">
-        <ul>
-          <li> <a href="about.html" target="_top">About</a> </li>
-          <li> <a href="faq.html" target="_top">FAQ</a> </li>
-        </ul>
-      </nav>
-      <nav id="categoryNav">
-        <a href="category-page.html" target="_top">Paperback</a>
-        <a href="category-page.html" target="_top">eBooks</a>
-        <a href="category-page.html" target="_top">Audiobooks</a>
-        <a href="category-page.html" target="_top">Accessories</a>
-      </nav>
-    </center>
-      
 
-  </header>
-
+        <div id="user-actions">
+          <nav>
+            <a href="login.html" target="_top">Login</a>
+            <a href="cart.html" target="_top">Cart</a>
+          </nav>
+        </div>
+        <div id="search">
+          <form id="search-form">
+            <label for="searchQuery"></label>
+            <input type="text" id="searchQuery" name="q" placeholder="Search for products..."
+                   required>
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <nav id="category-nav">
+      <a href="category-page.html" target="_top">Paperback</a>
+      <a href="category-page.html" target="_top">eBooks</a>
+      <a href="category-page.html" target="_top">Audiobooks</a>
+      <a href="category-page.html" target="_top">Accessories</a>
+    </nav>
+  </body>
 </html>

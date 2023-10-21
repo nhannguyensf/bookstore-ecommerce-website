@@ -1,0 +1,74 @@
+/* PAGE HEADER */
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+/* Logo on the left */
+#logo {
+  order: 1;
+}
+
+/* Page navigation to the right of the logo */
+#page-nav {
+  order: 2;
+}
+
+/* Centered search bar */
+#search {
+  order: 3;
+  flex: 1;
+  text-align: center;
+}
+
+/* Style the search input field */
+#search-form input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(95% - 150px);
+  margin-right: .5em;
+}
+
+/* Style the search button */
+#search-form button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add a hover effect for the search button */
+#search-form button:hover {
+  background-color: #005faa;
+}
+
+/* User actions to the right */
+#user-actions {
+  order: 4;
+}
+
+/* CATEGORY NAV */
+
+/* Style the category navigation */
+#category-nav {
+  background-color: grey;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the category navigation links */
+#category-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+/* Add a hover effect for category navigation links */
+#category-nav a:hover {
+  text-decoration: underline;
+}
