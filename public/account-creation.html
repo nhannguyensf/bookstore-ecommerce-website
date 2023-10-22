@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Account Creation</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
 
   <iframe
@@ -10,26 +11,47 @@
     scrolling="no"
     src="header-minimal.html"
     width="100%"
-    height="50px"
+    height="200px"
   ></iframe>
 
   <body>
-    <center>
+    <div class="account-form">
       <h1>Create Account</h1>
-      <form class="createAccForm" action="">
-        <fieldset>
-          <legend id="createAcc">Create Account</legend>
-          <label for="email">Email:</label>
-          <input type="text" name="email" id="email" required />
+      <form action="">
+        <label for="email">Email:</label><br />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          required
+          placeholder="Please enter your email"
+        /><br />
 
-          <br />
-          <label for="passwd">Password:</label>
-          <input type="password" name="passwd" id="passwd" required />
-          <br />
+        <br />
+        <label for="passwd">Password:</label><br />
+        <input
+          type="password"
+          name="passwd"
+          id="passwd"
+          required
+          placeholder="Please enter your password"
+        /><br />
 
-          <input type="submit" value="Create Account" />
-        </fieldset>
+        <br />
+        <label for="re-passwd">Re-enter password:</label><br />
+        <input
+          type="password"
+          name="re-passwd"
+          id="re-passwd"
+          required
+          placeholder="Please re-enter your password"
+        />
+        <br />
+        <br /><br />
+
+        <input type="submit" value="Create Account" /><br /><br />
       </form>
-    </center>
+      <a href="login.html">Already have an account? Log in</a>
+    </div>
   </body>
 </html>
