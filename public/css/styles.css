@@ -30,7 +30,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   width: calc(95% - 150px);
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 /* Style the search button */
