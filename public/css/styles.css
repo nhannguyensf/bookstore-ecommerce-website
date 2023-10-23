@@ -145,3 +145,63 @@ header img {
   box-shadow: 0 5px #666;
   transform: translateY(20px);
 }
+
+
+
+/* CATEGORY PAGE */
+
+
+/* Styles for the two-section container */
+.two-section-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Styles for the sidebar section */
+.sidebar-section {
+    width: 25%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    /* Add more styling for your sidebar */
+}
+
+/* Styles for the product display section */
+.product-display-section {
+    width: 75%;
+    padding: 20px;
+    /* Add more styling for your main content area */
+}
+
+.product-display-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Initially, 4 columns */
+    gap: 20px;
+    transition: grid-template-columns 0.5s; /* Add a transition for smooth changes */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .product-display-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    .product-display-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+    }
+}
+
+.item-display {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.item-display img {
+    width: 200px; /* Set a fixed width to ensure consistency */
+    height: 200px; /* Set a fixed height to maintain aspect ratio */
+    object-fit: contain; /* Maintain aspect ratio and crop if necessary */
+}
+
