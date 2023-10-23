@@ -151,7 +151,9 @@ header img {
 .cart-items {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  width: 50%;
+  margin: auto;
 }
 
 .cart-item {
@@ -162,12 +164,23 @@ header img {
   padding: 10px;
   border-radius: 5px;
 }
-.cart-total {
-  font: 2em san-serif;
-}
+
 .item-thumbnail {
   height: 100px;
   object-fit: cover;
+}
+
+.checkout-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px; /* Optional: Add some spacing from the right edge */
+}
+
+.cart-total {
+  font: 2em san-serif;
+  margin-bottom: 20px;
 }
 
 .checkout-btn {
