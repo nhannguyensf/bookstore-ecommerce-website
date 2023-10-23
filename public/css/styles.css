@@ -3,18 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 150px;
 }
 
 /* Logo on the left */
 #logo {
   order: 1;
-}
-
-/* Page navigation to the right of the logo */
-#page-nav {
-  order: 2;
-  padding: 8px 12px;
 }
 
 /* Centered search bar */
@@ -30,7 +24,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   width: calc(95% - 150px);
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 /* Style the search button */
@@ -53,6 +47,11 @@
   order: 4;
 }
 
+#user-actions nav a {
+  margin-right: 20px; /* Adjusts the space to the right of each link */
+  padding: 5px 10px; /* Adjusts the space around the text inside each link */
+}
+
 /* CATEGORY NAV */
 
 /* Style the category navigation */
@@ -72,4 +71,77 @@
 /* Add a hover effect for category navigation links */
 #category-nav a:hover {
   text-decoration: underline;
+}
+
+/* CATEGORY PAGES */
+.center {
+  text-align: center;
+}
+
+/* FOOTER STYLING */
+
+footer {
+  text-align: center;
+}
+
+/* CLASS STYLING */
+
+/* Login and Sign up form */
+/* Styling the form with a border box */
+.account-form {
+  text-align: center;
+  border: 2px solid #333; /* Adjust the color and thickness as desired */
+  padding: 10px; /* Space inside the border */
+  border-radius: 100px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: #fff; /* Background color for the form */
+}
+
+/* Adjusting the size of the labels */
+.account-form form label {
+  font-size: 26px; /* Adjust this value to increase or decrease the label size */
+}
+
+/* Adjusting the size of the input boxes */
+.account-form input[type="text"],
+.account-form input[type="password"] {
+  width: 50%; /* Makes the input boxes take the full width of their container */
+  padding: 5px; /* Adds some padding inside the input boxes */
+  font-size: 25px; /* Increases the font size */
+  box-sizing: border-box; /* Ensures padding and border are included in the total width */
+}
+
+/* Center the logo for mini header */
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+header img {
+  max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
+}
+
+.button {
+  transition-duration: 0.4s;
+  background-color: #5adb5f; /* Green */
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: green;
+  color: white;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(20px);
 }

@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
 
-  <iframe frameborder="0" scrolling="no" src="header-minimal.html" width="100%" height="50px"></iframe>
+  <iframe
+    frameborder="0"
+    scrolling="no"
+    src="header-minimal.html"
+    width="100%"
+    height="200px"
+  ></iframe>
 
   <body>
-    <center>
+    <div class="account-form">
       <h1>Login</h1>
       <form class="loginForm" action="">
-        <fieldset>
-          <legend id="login">Login</legend>
-          <label for="email">Email:</label>
-          <input type="text" name="email" id="email" required>
-    
-          <br>
-          <label for="passwd">Password:</label>
-          <input type="password" name="passwd" id="passwd" required>
-          <br>
-    
-          <input type="submit" value="Login">
-        </fieldset>
+        <label for="email">Email:</label><br />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          required
+          placeholder="Please enter your email"
+        /><br />
+
+        <br />
+        <label for="passwd">Password:</label><br />
+        <input
+          type="password"
+          name="passwd"
+          id="passwd"
+          required
+          placeholder="Please enter your password"
+        />
+        <br />
+        <br /><br />
+
+        <input type="submit" class="button" value="Login" /><br /><br />
       </form>
-      
-      <a href="account-creation.html">Create an account</a>
-    </center>
+      <br />
+      <a href="account-creation.html"
+        >Don't have an account yet? Sign up now.</a
+      >
+    </div>
   </body>
 </html>
