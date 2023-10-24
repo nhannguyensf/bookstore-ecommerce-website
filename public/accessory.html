@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Accessory Products</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   </head>
+
   <body>
+
     <iframe
       frameborder="0"
       scrolling="no"
@@ -13,7 +16,60 @@
       height="250px"
     ></iframe>
 
-    <h1>Accessory Products Page</h1>
+    <div class="two-section-container">
+      <div class="sidebar-section">
+        <h2>Filter Options</h2>
+        <div class="filter-category">
+          <h3>Category</h3>
+          <a href="paperback.html">Paperback</a>
+          <a href="ebook.html">eBook</a>
+          <a href="audiobook.html">Audiobook</a>
+          <a href="accessory.html" class="selected-filter">Accessory</a>
+        </div>
+        <div class="filter-price">
+          <h3>Price Range</h3>
+          <a href="under-5.html">Under $5</a>
+          <a href="between-5-and-10.html">Between $5 and $10</a>
+          <a href="between-10-and-25.html">Between $10 and $25</a>
+          <a href="above-25.html">Above $25</a>
+        </div>
+      </div>
+      <div class="product-display-section">
+        <div class="product-display-grid">
+          <div class="item-display">
+            <img src="images/accessory-example-bookmark.png" alt="Bookmark">
+            <h2>Bookmark</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+              consectetur.</p>
+            <h3>$xx.xx</h3>
+          </div>
+          <div class="item-display">
+            <img src="images/accessory-example-highlighters.png" alt="Highlighters">
+            <h2>Highlighters</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+              consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+              dolor sit amet.</p>
+            <h3>$xx.xx</h3>
+          </div>
+          <div class="item-display">
+            <img src="images/accessory-example-notebook.png" alt="Notebook">
+            <h2>Notebook</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+              consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+              dolor sit amet, Vivamus consectetur.</p>
+            <h3>$xx.xx</h3>
+          </div>
+          <div class="item-display">
+            <img src="images/accessory-example-reading-light.png" alt="Reading Light">
+            <h2>Reading Light</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+              consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+              dolor sit amet, Vivamus consectetur. Lorem ipsum dolor sit amet,dolor sit amet.</p>
+            <h3>$xx.xx</h3>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <iframe
       src="footer.html"
@@ -23,4 +79,6 @@
     ></iframe>
 
   </body>
+
 </html>
+

@@ -169,6 +169,10 @@ header img {
     /* Add more styling for your sidebar */
 }
 
+.selected-filter {
+    font-weight: bold;
+}
+
 /* CATEGORY PAGE - SIDEBAR - CATEGORY FILTER */
 .filter-category {
     text-align: left;
@@ -189,7 +193,7 @@ header img {
 }
 
 
-/* CATEGORY PAGE - SIDEBAR - CATEGORY FILTER */
+/* CATEGORY PAGE - SIDEBAR - PRICE FILTER */
 
 .filter-price a {
     text-decoration: none;
@@ -205,7 +209,7 @@ header img {
     color: var(--link-color-on-hover);
 }
 
-/* CATEGORY PAGE - PRODUCT DISPLAY */
+/* CATEGORY PAGE - PRODUCT DISPLAY GRID */
 .product-display-section {
     width: 75%;
     padding: 20px;
