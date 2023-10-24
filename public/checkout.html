@@ -15,20 +15,8 @@
   ></iframe>
 
   <body>
-    <h1 class="center">Checkout</h1>
+    <h1 class="center">Checkout: Shipping</h1>
     <div id="checkout-forms-container">
-
-      <!-- Leave checkout-nav out if we intend to 
-        have both shipping and payment forms, 
-        as well as confirm page
-        available all at once. 
-      -->
-      <!-- <div class="checkout-nav">
-        <a href="#">Shipping</a>
-        <a href="#">Payment</a>
-        <a href="#">Confirmation</a>
-      </div> -->
-
       <div class="account-form" id="shipping-form">
         <h1 class="center">Shipping Information</h1>
 
@@ -166,16 +154,19 @@
             />
           </div>
 
-          <input
-            class="checkout-btn"
-            type="submit" 
-            value="Proceed to payment"
-          />
+          <!-- Depends on design. -->
+          <a href="payment.html">
+            <input
+              class="checkout-btn"
+              type="submit" 
+              value="Proceed to payment"
+            />
+          </a>
 
         </form>
       </div>
 
-      <div class="account-form" id="payment-form">
+      <!-- <div class="account-form" id="payment-form">
         <h1 class="center">Payment Information</h1>
 
         <div class="payment-form-field">
@@ -219,7 +210,7 @@
             value="Checkout"
           />
 
-      </div>
+      </div> -->
     </div>
     
   </body>
