@@ -15,10 +15,62 @@
   ></iframe>
 
   <body>
-    <div class="center">
-      <h1>Cart</h1>
+    <div>
+      <h1 class="center">Cart</h1>
+
+      <!-- Cart Items List -->
+      <div class="cart-items">
+        <div class="cart-item">
+          <img
+            src="images/Kant_Immanuel-Critique_of_Pure_Reason.jpg"
+            alt="Item Thumbnail"
+            class="item-thumbnail"
+          />
+          <span class="item-name">Critique of Pure Reason</span>
+          <span class="item-quantity">Quantity: 1</span>
+          <span class="item-price">$100</span>
+        </div>
+
+        <div class="cart-item">
+          <img
+            src="images/Kant_Immanuel-Critique_of_Pure_Reason.jpg"
+            alt="Item Thumbnail"
+            class="item-thumbnail"
+          />
+          <span class="item-name">Critique of Pure Reason</span>
+          <span class="item-quantity">Quantity: 1</span>
+          <span class="item-price">$100</span>
+        </div>
+
+        <div class="cart-item">
+          <img
+            src="images/Kant_Immanuel-Critique_of_Pure_Reason.jpg"
+            alt="Item Thumbnail"
+            class="item-thumbnail"
+          />
+          <span class="item-name">Critique of Pure Reason</span>
+          <span class="item-quantity">Quantity: 1</span>
+          <span class="item-price">$100</span>
+        </div>
+      </div>
+
+      <!-- Checkout Section -->
+      <div class="checkout-section">
+        <!-- Total Price -->
+        <br />
+        <div class="cart-total">Total: $300</div>
+
+        <!-- Checkout Button -->
+        <a href="checkout.html"
+          ><button class="checkout-btn">Proceed to Checkout</button></a
+        >
+      </div>
+
+      <!-- Coupon Form -->
       <aside class="rightAlignedWidgets" id="couponForm">
-        Coupon form here
+        <label for="coupon">Enter Coupon Code:</label>
+        <input type="text" id="coupon" name="coupon" placeholder="Coupon" />
+        <button type="submit">Apply</button>
       </aside>
     </div>
   </body>

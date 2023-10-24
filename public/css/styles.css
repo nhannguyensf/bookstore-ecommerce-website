@@ -78,16 +78,13 @@
     text-decoration: underline;
 }
 
-/* CATEGORY PAGES */
-.center {
-    text-align: center;
-}
-
 /* FOOTER STYLING */
 
 footer {
     text-align: center;
 }
+
+
 
 /* CLASS STYLING */
 
@@ -152,8 +149,11 @@ header img {
 }
 
 
-/* CATEGORY PAGE */
+/* CATEGORY PAGES */
 
+.center {
+    text-align: center;
+}
 
 /* Two-section container: sidebar and product-display */
 .two-section-container {
@@ -245,3 +245,60 @@ header img {
     object-fit: contain;
 }
 
+/* CART PAGES */
+
+.center {
+  text-align: center;
+  padding: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+  margin: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.item-thumbnail {
+  height: 100px;
+  object-fit: cover;
+}
+
+.checkout-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px; /* Optional: Add some spacing from the right edge */
+}
+
+.cart-total {
+  font: 2em san-serif;
+  margin-bottom: 20px;
+}
+
+.checkout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: yellowgreen;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.rightAlignedWidgets {
+  text-align: right;
+  margin-top: 20px;
+}
