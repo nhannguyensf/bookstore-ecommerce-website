@@ -1,65 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Checkout</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  </head>
 
-  <iframe
-    frameborder="0"
-    scrolling="no"
-    src="header-minimal.html"
-    width="100%"
-    height="200px"
-  ></iframe>
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
 
-  <body>
-    <h1 class="center">Checkout: Payment Method</h1>
-    <div id="checkout-forms-container">
-      <div class="account-form" id="payment-form">
-        <h1 class="center">Payment Information</h1>
+<iframe frameborder="0" scrolling="no" src="header-minimal.html" width="100%" height="200px"></iframe>
 
+<body>
+  <h1 class="center">Checkout: Payment Method</h1>
+  <div id="checkout-forms-container">
+    <div class="account-form">
+      <h1 class="center">Payment Information</h1>
+
+      <form action="" id="payment-form">
         <div class="payment-form-field">
           <label for="cardholder">Cardholder's Name</label>
-          <input
-            type="text"
-            name="cardholder"
-            id="cardholder"
-            placeholder="John Smith"
-            required
-          />
+          <br />
+          <input type="text" name="cardholder" id="cardholder" placeholder="John Smith" required />
         </div>
 
         <div class="payment-form-field">
           <label for="cardholder">Card Number</label>
+          <br>
           <input type="number" name="cardnumber" id="cardnumber" />
         </div>
 
         <div class="payment-form-field">
           <label for="cardholder">Expiration Date</label>
-          <input
-            type="text"
-            name="expiration"
-            id="expiration"
-            placeholder="MM/YY"
-          />
+          <br>
+          <input type="text" name="expiration" id="expiration" placeholder="MM/YY" />
         </div>
 
         <div class="payment-form-field">
           <label for="cardholder">CVC:</label>
-          <input type="number" name="cardholder" id="cardholder" />
+          <br>
+          <input type="number" name="cardholder" id="cardholder" placeholder="420" />
         </div>
 
-        <input class="checkout-btn" type="submit" value="Place Order" />
-      </div>
+        <br>
+        <input class="button" type="submit" value="Place Order" />
+      </form>
     </div>
-  </body>
+  </div>
+</body>
 
-  <iframe
-    src="footer.html"
-    frameborder="0"
-    scrolling="no"
-    width="100%"
-  ></iframe>
+<iframe src="footer.html" frameborder="0" scrolling="no" width="100%"></iframe>
+
 </html>
