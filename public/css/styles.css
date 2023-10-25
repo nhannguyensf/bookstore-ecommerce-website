@@ -132,7 +132,6 @@ header img {
   max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
 }
 
-
 .button {
   transition-duration: 0.4s;
   background-color: #5adb5f; /* Green */
