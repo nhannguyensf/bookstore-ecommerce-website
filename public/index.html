@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,41 +6,61 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
 
-  <iframe
-    frameborder="0"
-    scrolling="no"
-    src="header.html"
-    width="100%"
-    height="250px"
-  ></iframe>
-
   <body>
+    <iframe
+      frameborder="0"
+      scrolling="no"
+      src="header.html"
+      width="100%"
+      height="250px"
+    ></iframe>
+
     <div class="center">
       <img
         src="images/halloweenBanner.png"
         alt="promotion image"
         width="100%"
       />
-      <h1>Sample Collection:</h1>
+      <h1 class="banner">Featured Authors</h1>
     </div>
-    <section class="featuredProduct">
-      <a href="product-page.html" class="productApparatus">
-        <img
-          src="images/Kant_Immanuel-Critique_of_Pure_Reason.jpg"
-          alt=""
-          width="10%"
-          height="10%"
-        />
-        <br/>
-        <span class="productTitle">Critique of Pure Reason</span>
-      </a>
-    </section>
-  </body>
 
-  <iframe
-    src="footer.html"
-    frameborder="0"
-    scrolling="no"
-    width="100%"
-  ></iframe>
+    <div class="featured-product-section">
+      <div class="product-display-grid">
+        <div class="featured-item">
+          <a href="product-page.html">
+            <img
+              src="images/homepage-book-example-kant-critique-of-pure-reason.jpg"
+              alt="Critique of Pure Reason"
+            />
+            <h2>Immanuel Kant</h2>
+            <h3>Critique of Pure Reason</h3>
+          </a>
+        </div>
+        <div class="featured-item">
+          <a href="product-page.html">
+            <img src="images/homepage-book-example-no-exit.png" alt="No Exit" />
+            <h2>Jean-Paul Sartre</h2>
+            <h3>No Exit</h3>
+          </a>
+        </div>
+        <div class="featured-item">
+          <a href="product-page.html">
+            <img
+              src="images/homepage-book-example-orwell-1984.png"
+              alt="1984"
+            />
+            <h2>George Orwell</h2>
+            <h3>1984</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <iframe
+      src="footer.html"
+      frameborder="0"
+      scrolling="no"
+      width="100%"
+    ></iframe>
+  </body>
 </html>

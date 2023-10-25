@@ -1,116 +1,115 @@
 :root {
-    --link-color: darkblue;
-    --link-color-on-hover: lightblue;
+  --link-color: darkblue;
+  --link-color-on-hover: lightblue;
+  --banner-color: lightgray;
 }
 
 /* PAGE HEADER */
 #header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
 }
 
 /* Logo on the left */
 #logo {
-    order: 1;
+  order: 1;
 }
 
 /* Centered search bar */
 #search {
-    order: 3;
-    flex: 1;
-    text-align: center;
+  order: 3;
+  flex: 1;
+  text-align: center;
 }
 
 /* Style the search input field */
 #search-form input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: calc(95% - 150px);
-    margin-right: 0.5em;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(95% - 150px);
+  margin-right: 0.5em;
 }
 
 /* Style the search button */
 #search-form button {
-    background-color: #007acc;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Add a hover effect for the search button */
 #search-form button:hover {
-    background-color: #005faa;
+  background-color: #005faa;
 }
 
 /* User actions to the right */
 #user-actions {
-    order: 4;
+  order: 4;
 }
 
 #user-actions nav a {
-    margin-right: 20px; /* Adjusts the space to the right of each link */
-    padding: 5px 10px; /* Adjusts the space around the text inside each link */
+  margin-right: 20px; /* Adjusts the space to the right of each link */
+  padding: 5px 10px; /* Adjusts the space around the text inside each link */
 }
 
 /* CATEGORY NAV */
 
 /* Style the category navigation */
 #category-nav {
-    background-color: grey;
-    padding: 10px;
-    text-align: center;
+  background-color: grey;
+  padding: 10px;
+  text-align: center;
 }
 
 /* Style the category navigation links */
 #category-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
 }
 
 /* Add a hover effect for category navigation links */
 #category-nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* FOOTER STYLING */
 
 footer {
-    text-align: center;
+  text-align: center;
 }
-
-
 
 /* CLASS STYLING */
 
 /* Login and Sign up form */
 /* Styling the form with a border box */
 .account-form {
-    text-align: center;
-    border: 2px solid #333; /* Adjust the color and thickness as desired */
-    padding: 10px; /* Space inside the border */
-    border-radius: 100px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    background-color: #fff; /* Background color for the form */
+  text-align: center;
+  border: 2px solid #333; /* Adjust the color and thickness as desired */
+  padding: 10px; /* Space inside the border */
+  border-radius: 100px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: #fff; /* Background color for the form */
 }
 
 /* Adjusting the size of the labels */
 .account-form form label {
-    font-size: 26px; /* Adjust this value to increase or decrease the label size */
+  font-size: 26px; /* Adjust this value to increase or decrease the label size */
 }
 
 /* Adjusting the size of the input boxes */
 .account-form input[type="text"],
 .account-form input[type="password"] {
-    width: 50%; /* Makes the input boxes take the full width of their container */
-    padding: 5px; /* Adds some padding inside the input boxes */
-    font-size: 25px; /* Increases the font size */
-    box-sizing: border-box; /* Ensures padding and border are included in the total width */
+  width: 50%; /* Makes the input boxes take the full width of their container */
+  padding: 5px; /* Adds some padding inside the input boxes */
+  font-size: 25px; /* Increases the font size */
+  box-sizing: border-box; /* Ensures padding and border are included in the total width */
 }
 
 /* Loosely follow text and password type inputs */
@@ -123,139 +122,172 @@ footer {
 
 /* Center the logo for mini header */
 .logo-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
 
 header img {
-    max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
+  max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
 }
 
+
 .button {
-    transition-duration: 0.4s;
-    background-color: #5adb5f; /* Green */
-    border: none;
-    color: rgb(255, 255, 255);
-    padding: 15px 30px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
-    box-shadow: 0 9px #999;
+  transition-duration: 0.4s;
+  background-color: #5adb5f; /* Green */
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 9px #999;
 }
 
 .button:hover {
-    background-color: green;
-    color: white;
+  background-color: green;
+  color: white;
 }
 
 .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(20px);
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(20px);
 }
 
+/* HOME PAGE - FEATURED PRODUCT DISPLAY SECTION */
+
+/*featured banner used in homepage*/
+.banner {
+  background: var(--banner-color);
+  height: 50px;
+  padding-top: 10px;
+}
+.featured-product-section {
+  padding: 0 20px 40px 20px;
+}
+
+.featured-product-section .product-display-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.featured-item {
+  border: 10px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.featured-item img {
+  height: 400px;
+  object-fit: contain;
+}
+
+/* == END HOMEPAGE == */
 
 /* CATEGORY PAGES */
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 /* Two-section container: sidebar and product-display */
 .two-section-container {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 /* CATEGORY PAGE - SIDEBAR */
 .sidebar-section {
-    width: 25%;
-    background-color: #f2f2f2;
-    padding: 20px;
-    /* Add more styling for your sidebar */
+  width: 25%;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
 .selected-filter {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* CATEGORY PAGE - SIDEBAR - CATEGORY FILTER */
 .filter-category {
-    text-align: left;
+  text-align: left;
 }
 
 .filter-category a {
-    color: var(--link-color);
-    text-decoration: none;
-    display: block;
-    margin-left: 10px;
-    margin-bottom: 10px; /* Space between links */
-    font-size: 16px;
+  color: var(--link-color);
+  text-decoration: none;
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 10px; /* Space between links */
+  font-size: 16px;
 }
 
 .filter-category a:hover {
-    text-decoration: underline;
-    color: var(--link-color-on-hover); /* Text color for the links on hover */
+  text-decoration: underline;
+  color: var(--link-color-on-hover); /* Text color for the links on hover */
 }
-
 
 /* CATEGORY PAGE - SIDEBAR - PRICE FILTER */
 
 .filter-price a {
-    text-decoration: none;
-    color: var(--link-color);
-    display: block;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
+  text-decoration: none;
+  color: var(--link-color);
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .filter-price a:hover {
-    text-decoration: underline;
-    color: var(--link-color-on-hover);
+  text-decoration: underline;
+  color: var(--link-color-on-hover);
 }
 
 /* CATEGORY PAGE - PRODUCT DISPLAY GRID */
 .product-display-section {
-    width: 75%;
-    padding: 20px;
-    /* Add more styling for your main content area */
+  width: 75%;
+  padding: 20px;
 }
 
 .product-display-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Initially set 4 columns */
-    gap: 20px;
-    transition: grid-template-columns 0.5s;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Initially set 4 columns */
+  gap: 20px;
+  transition: grid-template-columns 0.5s;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .product-display-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
-    }
+  .product-display-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+  }
 }
 
 /* Media query for even smaller screens */
 @media (max-width: 480px) {
-    .product-display-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
-    }
+  .product-display-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for very small screens */
+  }
 }
 
 .item-display {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 .item-display img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
 }
+
+/* == END CATEGORY PAGE == */
 
 /* CART PAGES */
 
@@ -318,13 +350,21 @@ header img {
 .product-container {
   display: grid;
   grid-template-areas:
-  'picture picture picture name name name'
-  'picure picture picture price price price'
-  'picure picture picture cart cart cart';
+    "picture picture picture name name name"
+    "picure picture picture price price price"
+    "picure picture picture cart cart cart";
   grid-gap: 10px;
 }
 
-.item-picture {grid-area: 1/1/3/3;}
-.item-name {grid-area: 1/4/1/6;}
-.item-price {grid-area: 2/4/2/6;}
-.item-cart {grid-area: 3/4/3/6;}
+.item-picture {
+  grid-area: 1/1/3/3;
+}
+.item-name {
+  grid-area: 1/4/1/6;
+}
+.item-price {
+  grid-area: 2/4/2/6;
+}
+.item-cart {
+  grid-area: 3/4/3/6;
+}
