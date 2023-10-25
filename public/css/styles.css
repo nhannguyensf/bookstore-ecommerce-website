@@ -316,8 +316,25 @@ header img {
 
 /*Product Page*/
 
+.page-format > * {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 div.button-layout > button {
   margin: 10px;
+}
+
+div.product-review {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #cfcfcff4;
+}
+
+.child-padding > * {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .product-container {
@@ -330,10 +347,11 @@ div.button-layout > button {
 }
 
 .product-image {
+  --imgwidth: 600px;
   align-items: stretch;
   padding: 10px;
-  width: 600px;
-  height: 800px;
+  width: var(--imgwidth);
+  height: calc(var(--imgwidth) * 1.16);
 }
 
 .item-picture {
