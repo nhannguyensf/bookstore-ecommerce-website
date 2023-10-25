@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Checkout</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
 
   <body>
     <iframe
@@ -23,6 +24,7 @@
         <form action="payment.html">
           <div class="shipping-form-field">
             <label for="fname">First Name:</label>
+            <br>
             <input
               type="text"
               name="fname"
@@ -34,6 +36,7 @@
 
           <div class="shipping-form-field">
             <label for="lname">Last Name:</label>
+            <br>
             <input
               type="text"
               name="lname"
@@ -45,6 +48,7 @@
 
           <div class="shipping-form-field">
             <label for="addr1">Street Address:</label>
+            <br>
             <input
               type="text"
               name="addr1"
@@ -54,18 +58,15 @@
             />
           </div>
 
-          <div class="shipping-form-field">
-            <!-- <label for="addr2">Street Address:</label> -->
-            <input
-              type="text"
-              name="addr2"
-              id="addr2"
-              placeholder="apt/suit/unit number"
-            />
-          </div>
+        <div class="shipping-form-field">
+          <label for="addr1">Street Address:</label>
+          <br>
+          <input type="text" name="addr1" id="addr1" placeholder="Address line 1" required />
+        </div>
 
           <div class="shipping-form-field">
             <label for="city">City:</label>
+            <br>
             <input
               type="text"
               name="city"
@@ -77,6 +78,7 @@
 
           <div class="shipping-form-field" class="form-dropdown-field">
             <label for="states">State:</label>
+            <br>
             <select id="states-list">
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -134,6 +136,7 @@
 
           <div class="shipping-form-field">
             <label for="zip">Zip-code:</label>
+            <br>
             <input
               type="number"
               name="city"
@@ -144,7 +147,7 @@
           </div>
 
           <div class="shipping-form-field">
-            <label for="phone">Phone Number: +1</label>
+            <label for="phone">Phone Number: <br> +</label>
             <input
               type="number"
               name="phone"
@@ -154,20 +157,21 @@
             />
           </div>
 
+          <br>
           <a href="payment.html">
-            <button class="checkout-btn" type="submit">
+            <button
+              class="button"
+              type="submit"
+            >
               Proceed to payment
             </button>
           </a>
         </form>
       </div>
     </div>
+  </div>
 
-    <iframe
-      src="footer.html"
-      frameborder="0"
-      scrolling="no"
-      width="100%"
-    ></iframe>
-  </body>
+  <iframe src="footer.html" frameborder="0" scrolling="no" width="100%"></iframe>
+
+</body>
 </html>

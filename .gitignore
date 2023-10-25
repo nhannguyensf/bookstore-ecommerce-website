@@ -2,6 +2,10 @@
 .idea/
 .vscode/
 
+# IntelliJ Prettier Files
+node_modules/
+*.json
+
 # OS specific
 .DS_Store
 Thumbs.db
