@@ -349,8 +349,8 @@ header img {
 /*Product Page*/
 
 .page-format > * {
-  padding-left: 5%;
-  padding-right: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 div.button-layout > button {
@@ -362,31 +362,41 @@ div.product-review {
   border-radius: 10px;
   border-width: 2px;
   border-color: #cfcfcff4;
+  padding-left: 5%;
 }
 
 .child-padding > * {
-  padding-left: 5%;
-  padding-right: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .product-container {
   display: grid;
   grid-template-areas:
-    "picture picture picture name name name"
-    "picure picture picture price price price"
-    "picure picture picture cart cart cart";
-  grid-gap: 10px;
+    "picture picture name name name"
+    "picure picture price price price"
+    "picure picture cart cart cart";
+}
+
+img.product-image {
+  --width: 400px;
+  width: var(--width);
+  height: calc(var(--width) * 1.17);
 }
 
 .item-picture {
-  grid-area: 1/1/3/3;
+  grid-area: 1/2/4/3;
+  align-items: self-end;
+  align-content: end;
+  justify-items: end;
+  justify-content: end;
 }
 .item-name {
-  grid-area: 1/4/1/6;
+  grid-area: 1/3/1/5;
 }
 .item-price {
-  grid-area: 2/4/2/6;
+  grid-area: 2/3/2/5;
 }
 .item-cart {
-  grid-area: 3/4/3/6;
+  grid-area: 3/3/3/5;
 }
