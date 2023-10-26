@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order completed!</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Checkout</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-</head>
+  <body>
+    <iframe
+      frameborder="0"
+      scrolling="no"
+      src="header-minimal.html"
+      width="100%"
+      height="200px"
+    ></iframe>
 
-<body>
-  <iframe frameborder="0" scrolling="no" src="header.html" width="100%" height="200px"></iframe>
+    <div class="center" id="receipt-container">
+      <h1>You have completed your order!</h1>
 
-  <div class="center" id="receipt-container">
-    <h1>You have completed your order!</h1>
-    
-    <p>Receipt page to display cart data and shipping, payment form values.</p>
+      <p>
+        Receipt page to display cart data and shipping, payment form values.
+      </p>
 
-    <a href="index.html">
-      <button class="button" type="button">
-        Back to Home Page
-      </button>
-    </a>
-  </div>
+      <a href="index.html">
+        <button class="button" type="button">Back to Home Page</button>
+      </a>
+    </div>
 
-  <iframe src="footer.html" frameborder="0" scrolling="no" width="100%"></iframe>
-
-</body>
-
+    <iframe
+      src="footer.html"
+      frameborder="0"
+      scrolling="no"
+      width="100%"
+    ></iframe>
+  </body>
 </html>
