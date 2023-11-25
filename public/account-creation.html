@@ -17,8 +17,11 @@
 
     <div class="account-form">
       <h1>Create Account</h1>
-      <form action="">
-        <label for="email">Email:</label><br />
+      <form action="" onsubmit="return validateForm('accountCreationForm')">
+        <label for="email">Email:</label>
+        <br />
+        <span id="emailError" class="error"></span>
+        <br />
         <input
           type="text"
           name="email"
@@ -28,7 +31,10 @@
         /><br />
 
         <br />
-        <label for="passwd">Password:</label><br />
+        <label for="passwd">Password:</label>
+        <br />
+        <span id="passwordError" class="error"></span>
+        <br />
         <input
           type="password"
           name="passwd"
@@ -38,7 +44,10 @@
         /><br />
 
         <br />
-        <label for="re-passwd">Re-enter password:</label><br />
+        <label for="re-passwd">Re-enter password:</label>
+        <br />
+        <span id="confirmPasswordError" class="error"></span>
+        <br />
         <input
           type="password"
           name="re-passwd"
@@ -58,5 +67,6 @@
       <br />
       <a href="login.html">Already have an account? Log in</a>
     </div>
+    <script src="scripts/formValidation.js"></script>
   </body>
 </html>

@@ -404,3 +404,8 @@ img.product-image {
 fieldset.fieldset-border {
   border: 0;
 }
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}
