@@ -31,41 +31,57 @@
         <div class="button-layout">
           <fieldset class="fieldset-border">
             <div>
-              <input type="radio" id="ebook" value="E-book" name=" format" />
-              <label for="ebook">E-Book $7.99</label>
+              <input
+                type="radio"
+                id="ebook"
+                value="E-book"
+                name="format"
+                data-price="7.99"
+              />
+              <label for="ebook">E-Book</label>
+              <span class="price-display" id="ebook-price"></span>
             </div>
+
             <div>
               <input
                 type="radio"
                 id="audiobook"
                 value="Audiobook"
-                name=" format"
+                name="format"
+                data-price="9.00"
               />
-              <label for="audiobook">AudioBook $9.00</label>
+              <label for="audiobook">AudioBook</label>
+              <span class="price-display" id="audiobook-price"></span>
             </div>
+
             <div>
               <input
                 type="radio"
                 id="hardcover"
                 value="Hardcover"
-                name=" format"
+                name="format"
+                data-price="12.98"
               />
-              <label for="hardcover">Hardcover $12.98</label>
+              <label for="hardcover">Hardcover</label>
+              <span class="price-display" id="hardcover-price"></span>
             </div>
+
             <div>
               <input
                 type="radio"
                 id="paperback"
                 value="Paperback"
-                name=" format"
+                name="format"
+                data-price="11.58"
               />
-              <label for="paperback">Paperback $11.58</label>
+              <label for="paperback">Paperback</label>
+              <span class="price-display" id="paperback-price"></span>
             </div>
           </fieldset>
         </div>
       </div>
       <div class="item-cart">
-        <a href="cart.html"><button type="submit">Add to cart</button></a>
+        <button type="button" id="addToCartButton">Add to Cart</button>
       </div>
     </div>
     <div class="Product-Description page-format">
@@ -124,5 +140,6 @@
       scrolling="no"
       width="100%"
     ></iframe>
+    <script src="scripts/addToCart.js"></script>
   </body>
 </html>
