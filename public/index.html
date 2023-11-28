@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Homepage</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   </head>
 
   <body>
@@ -11,52 +11,57 @@
     <nav id="category-nav"></nav>
 
     <div class="center">
-      <img
-        src="images/halloweenBanner.png"
-        alt="promotion image"
-        width="100%"
-      />
-      <h1 class="banner">Featured Authors</h1>
-    </div>
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="images/winterBanner.png" alt="winter promotion"/>
+        </div>
+        <div class="slide fade">
+          <img src="images/halloweenBanner.png" alt="fall promotion"/>
+        </div>
+        <div class="slide fade">
+          <img src="images/summerBanner.png" alt="summer promotion"/>
+        </div>
+        <div class="slide fade">
+          <img src="images/newYearsBanner.png" alt="new years promotion"/>
+        </div>
+      </div>
 
-    <div class="featured-product-section">
-      <div class="product-display-grid">
-        <div class="featured-item">
-          <a href="product-page.html">
-            <img
-              src="images/homepage-book-example-kant-critique-of-pure-reason.jpg"
-              alt="Critique of Pure Reason"
-            />
-            <h2>Immanuel Kant</h2>
-            <h3>Critique of Pure Reason</h3>
-          </a>
-        </div>
-        <div class="featured-item">
-          <a href="product-page.html">
-            <img src="images/homepage-book-example-no-exit.png" alt="No Exit" />
-            <h2>Jean-Paul Sartre</h2>
-            <h3>No Exit</h3>
-          </a>
-        </div>
-        <div class="featured-item">
-          <a href="product-page.html">
-            <img
-              src="images/homepage-book-example-orwell-1984.png"
-              alt="1984"
-            />
-            <h2>George Orwell</h2>
-            <h3>1984</h3>
-          </a>
+      <div class="featured-product-section">
+        <h1 class="banner">Featured Authors</h1>
+        <div class="product-display-grid">
+          <div class="featured-item">
+            <a href="product-page.html">
+              <img
+                src="images/homepage-book-example-kant-critique-of-pure-reason.jpg"
+                alt="Critique of Pure Reason"
+              />
+              <h2>Immanuel Kant</h2>
+              <h3>Critique of Pure Reason</h3>
+            </a>
+          </div>
+          <div class="featured-item">
+            <a href="product-page.html">
+              <img src="images/homepage-book-example-no-exit.png" alt="No Exit"/>
+              <h2>Jean-Paul Sartre</h2>
+              <h3>No Exit</h3>
+            </a>
+          </div>
+          <div class="featured-item">
+            <a href="product-page.html">
+              <img
+                src="images/homepage-book-example-orwell-1984.png"
+                alt="1984"
+              />
+              <h2>George Orwell</h2>
+              <h3>1984</h3>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <iframe
-      src="footer.html"
-      frameborder="0"
-      scrolling="no"
-      width="100%"
-    ></iframe>
+    <footer id="footer-container"></footer>
     <script src="scripts/header-site-wide.js"></script>
+    <script src="scripts/homepage-slideshow.js"></script>
   </body>
 </html>
