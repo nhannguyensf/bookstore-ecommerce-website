@@ -19,47 +19,15 @@
       <h1 class="center">Cart</h1>
 
       <!-- Cart Items List -->
-      <div class="cart-items">
-        <div class="cart-item">
-          <img
-            src="images/homepage-book-example-kant-critique-of-pure-reason.jpg"
-            alt="Item Thumbnail"
-            class="item-thumbnail"
-          />
-          <span class="item-name">Critique of Pure Reason</span>
-          <span class="item-quantity">Quantity: 1</span>
-          <span class="item-price">$100</span>
-        </div>
-
-        <div class="cart-item">
-          <img
-            src="images/homepage-book-example-kant-critique-of-pure-reason.jpg"
-            alt="Item Thumbnail"
-            class="item-thumbnail"
-          />
-          <span class="item-name">Critique of Pure Reason</span>
-          <span class="item-quantity">Quantity: 1</span>
-          <span class="item-price">$100</span>
-        </div>
-
-        <div class="cart-item">
-          <img
-            src="images/homepage-book-example-kant-critique-of-pure-reason.jpg"
-            alt="Item Thumbnail"
-            class="item-thumbnail"
-          />
-          <span class="item-name">Critique of Pure Reason</span>
-          <span class="item-quantity">Quantity: 1</span>
-          <span class="item-price">$100</span>
-        </div>
+      <div class="cart-items" id="cartItemsContainer">
+        <!-- Cart items will be dynamically inserted here -->
       </div>
 
       <!-- Checkout Section -->
       <div class="checkout-section">
         <!-- Total Price -->
-        <br />
-        <div class="cart-total">Total: $300</div>
-
+        <br /><br />
+        <div class="cart-total" id="cartTotal">Total: $0</div>
         <!-- Checkout Button -->
         <a href="checkout.html"
           ><button class="checkout-btn">Proceed to Checkout</button></a
@@ -80,5 +48,6 @@
       scrolling="no"
       width="100%"
     ></iframe>
+    <script src="scripts/addToCart.js"></script>
   </body>
 </html>
