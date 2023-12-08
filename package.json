@@ -1,0 +1,32 @@
+{
+  "name": "ecommerce-bookstore",
+  "version": "1.0.0",
+  "description": "\"A web-based bookstore application backed by an MySQL database.\"",
+  "main": "server317.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebDev317-03-Fall2023/group-project-2-website-nhannguyensf.git"
+  },
+  "keywords": [
+    "bookstore",
+    "ecommerce",
+    "books",
+    "online-store",
+    "mysql",
+    "nodejs",
+    "express"
+  ],
+  "author": "two-foot-tall-giraffe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebDev317-03-Fall2023/group-project-2-website-nhannguyensf/issues"
+  },
+  "homepage": "https://github.com/WebDev317-03-Fall2023/group-project-2-website-nhannguyensf#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-generator": "^4.16.1"
+  }
+}

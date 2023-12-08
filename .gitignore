@@ -5,3 +5,6 @@
 # OS specific
 .DS_Store
 Thumbs.db
+
+# NodeJS specific
+node_modules/
