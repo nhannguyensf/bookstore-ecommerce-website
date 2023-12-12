@@ -39,10 +39,10 @@ fetch('/api/featuredProducts')
       productDiv.className = "featured-item";
 
       const productLink = document.createElement('a');
-      productLink.href = "product-page.html"; // adjust this as necessary
+      productLink.href = `product-page.html?productName=${encodeURIComponent(product.name)}`;
 
       const productImg = document.createElement('img');
-      productImg.src = `images/products/${product.imgName}.png`; // adjust this as necessary
+      productImg.src = `images/products/${product.imgName}.png`;
       productImg.alt = product.name;
 
       const productCreator = document.createElement('h2');

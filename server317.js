@@ -34,6 +34,32 @@ app.get('/api/featuredProducts', async function(req, res) {
   }
 });
 
+// Set up a route to product-page.html
+app.get("/product-page", function (req, res) {
+  res.sendFile(path.join(StaticDirectory, "product-page.html"));
+});
+
+//  Setup route to product page after clicking on a link and passing name as data
+app.get('/api/product/:productName', async function(req, res) {
+  try {
+    const productName = req.params.productName;
+    const productData = await db.queryProductsTable(['*'], {name: {operator: 'isEqual', value: [productName]}});
+    if (productData.length > 0) {
+      res.json(productData);
+    } else {
+      res.status(404).json({ message: 'Product not found' });
+    }
+  } catch (err) {
+    console.error("Failed to get product details:", err);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
+
+
+
+
+
+
 // Start the server
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}/`);

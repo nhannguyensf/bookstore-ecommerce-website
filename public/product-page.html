@@ -12,99 +12,9 @@
     <br />
     <br />
 
-    <div class="product-container page-format">
-      <div class="item-picture">
-        <img
-          class="product-image"
-          src="images/products/critiqueOfPureReason.jpg"
-        />
-      </div>
-      <div class="item-name">
-        <h1>Critique of Pure Reason</h1>
-      </div>
-      <div class="item-price">
-        <div class="button-layout">
-          <fieldset class="fieldset-border">
-            <div>
-              <input
-                type="radio"
-                id="ebook"
-                value="E-book"
-                name="format"
-                data-price="7.99"
-              />
-              <label for="ebook">E-Book</label>
-              <span class="price-display" id="ebook-price"></span>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                id="audiobook"
-                value="Audiobook"
-                name="format"
-                data-price="9.00"
-              />
-              <label for="audiobook">AudioBook</label>
-              <span class="price-display" id="audiobook-price"></span>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                id="hardcover"
-                value="Hardcover"
-                name="format"
-                data-price="12.98"
-              />
-              <label for="hardcover">Hardcover</label>
-              <span class="price-display" id="hardcover-price"></span>
-            </div>
-
-            <div>
-              <input
-                type="radio"
-                id="paperback"
-                value="Paperback"
-                name="format"
-                data-price="11.58"
-              />
-              <label for="paperback">Paperback</label>
-              <span class="price-display" id="paperback-price"></span>
-            </div>
-          </fieldset>
-        </div>
-      </div>
-      <div class="item-cart">
-        <button type="button" id="addToCartButton">Add to Cart</button>
-      </div>
-    </div>
-    <div class="Product-Description page-format">
-      <h2 class="center">Product Overview</h2>
-      <div>
-        <p><u>Book Description</u></p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue,
-          massa ac fringilla venenatis, lectus massa dignissim felis, at
-          malesuada erat ipsum et urna. Maecenas hendrerit erat lectus, sodales
-          ultrices nibh ultrices non. Quisque semper eget elit vitae placerat.
-          Nunc mauris purus, imperdiet ut mauris id, vulputate dictum sem.
-          Phasellus dapibus tincidunt purus eget bibendum. Phasellus a nisl et
-          tellus rhoncus aliquet. Curabitur sed sollicitudin diam. Suspendisse
-          sapien ligula, vestibulum vel tincidunt in, interdum id justo. Proin
-          sed leo ligula. Aenean ipsum augue, finibus eu tortor at, dictum
-          facilisis felis. Phasellus dapibus mauris id velit auctor, ut rhoncus
-          ligula sodales. Duis ligula augue, gravida non arcu eget, feugiat
-          tristique nisi. Sed non mollis metus. Vivamus sed urna orci. Nam purus
-          quam, rutrum sed ullamcorper id, faucibus eu quam.
-        </p>
-      </div>
-
-      <br />
-      <p>ISBN: 923014828832</p>
-      <p>Author: Immanual Kant</p>
-    </div>
+    <div id="product-display" class="center"></div>
     <br />
+
     <div class="page-format">
       <h2 class="center">User Reviews</h2>
       <div class="product-review">
@@ -131,6 +41,7 @@
     <br />
     <footer id="footer-container"></footer>
     <script src="scripts/siteWideHeaderGenerator.js"></script>
+    <script src="scripts/individualProductLoader.js"></script>
     <script src="scripts/addToCart.js"></script>
   </body>
 </html>
