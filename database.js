@@ -1,3 +1,28 @@
+// Import mysql module
+let mysql = require('mysql');
+let connection;
+
+function connectToDatabase() {
+  return new Promise((resolve, reject) => {
+    connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'student',
+      password: 'student',
+      database: 'ecommerceBookstore'
+    });
+
+    connection.connect(function (e) {
+      if (e) {
+        console.error('error: ' + e.message);
+        reject(e);  // Reject the promise with the error
+      } else {
+        console.log('\nConnected to the MySQL server...\n');
+        resolve(); // Resolve the promise as the connection was successful
+      }
+    });
+  });
+}
+
 function queryProductsTable(parameters, condition) {
   const table = 'Products';
   let query = `SELECT ${parameters.join(', ')} FROM ${table}`;
@@ -47,3 +72,17 @@ Example Usages:
     This would execute the following SQL command:
     SELECT name FROM Products WHERE name != 'Apple'
 */
+
+// Close the database connection
+function closeDatabaseConnection() {
+  connection.end(function () {
+    console.log('\nConnection closed. \n')
+  });
+}
+
+
+module.exports = {
+  connectToDatabase,
+  queryProductsTable,
+  closeDatabaseConnection
+};
