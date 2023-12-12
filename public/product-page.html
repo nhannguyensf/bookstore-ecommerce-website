@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Product Page</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   </head>
 
   <body>
     <header id="header-container"></header>
     <nav id="category-nav"></nav>
-    <br />
-    <br />
+    <br/>
+    <br/>
 
     <div id="product-display" class="center"></div>
-    <br />
+    <br/>
 
-    <div class="page-format">
+    <div class="page-format" id="reviewBox">
       <h2 class="center">User Reviews</h2>
-      <div class="product-review">
-        <a href="login.html" <!-- to direct to user page -->
-          <h4>User9857</h4>
-        </a>
-        <p>This book is great!</p>
-      </div>
-      <br />
-      <div class="product-review">
-        <a href="login.html" <!-- to direct to user page -->
-          <h4>User9857</h4>
-        </a>
-        <p>Great read!</p>
-      </div>
-      <br />
-      <div class="product-review">
-        <a href="login.html" <!-- to direct to user page -->
-          <h4>User9857</h4>
-        </a>
-        <p>It was alright, I guess.</p>
+
+      <div class="page-format" id="reviewSection">
+        <div id="reviewArea" class="product-review">
+          <label for="textBox"></label><input type="text" id="textBox" value="product review"/>
+          <input type="button" id="submitButton" value="submit"/>
+        </div>
+
+        <div class="product-review">
+          <a href="login.html"> <!-- to direct to user page -->
+            <h4>User9857</h4>
+          </a>
+          <p>This book is great!</p>
+        </div>
+        <br/>
+        <div class="product-review">
+          <a href="login.html"> <!-- to direct to user page -->
+            <h4>User9857</h4>
+          </a>
+          <p>Great read!</p>
+        </div>
+        <br/>
+        <div class="product-review">
+          <a href="login.html"> <!-- to direct to user page -->
+            <h4>User9857</h4>
+          </a>
+          <p>It was alright, I guess.</p>
+        </div>
       </div>
     </div>
-    <br />
+    <br/>
     <footer id="footer-container"></footer>
     <script src="scripts/siteWideHeaderGenerator.js"></script>
     <script src="scripts/individualProductLoader.js"></script>
     <script src="scripts/addToCart.js"></script>
+    <script src="scripts/addReview.js"></script>
   </body>
 </html>
