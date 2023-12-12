@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 // Set up a route to get featured products
 app.get('/api/featuredProducts', async function(req, res) {
   try {
-    const data = await db.queryProductsTable(['creator', 'name', 'imgName'], {isFeatured: {operator: 'isEqual', value: 1} });
+    const data = await db.queryProductsTable(['*'], {isFeatured: {operator: 'isEqual', value: 1} });
     res.json(data);
   } catch (err) {
     console.error("Failed to query featured products:", err);

@@ -231,7 +231,7 @@ header img {
 
 .featured-product-section .product-display-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -242,8 +242,9 @@ header img {
 }
 
 .featured-item img {
-  height: 400px;
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .slideshow-container {
