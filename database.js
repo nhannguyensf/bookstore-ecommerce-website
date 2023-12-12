@@ -24,31 +24,35 @@ function connectToDatabase() {
 }
 
 function queryProductsTable(parameters, condition) {
-  const table = 'Products';
-  let query = `SELECT ${parameters.join(', ')} FROM ${table}`;
+  return new Promise((resolve, reject) => {
+    const table = 'Products';
+    let query = `SELECT ${parameters.join(', ')} FROM ${table}`;
 
-  // Insert WHERE clause
-  if (condition && Object.keys(condition).length) {
-    let operatorSymbols = {
-      isEqual: '=',
-      isNotEqual: '!=',
-      isLessThan: '<',
-      isLessThanOrEqual: '<=',
-      isGreaterThan: '>',
-      isGreaterThanOrEqual: '>'
-    };
+    // Insert WHERE clause
+    if (condition && Object.keys(condition).length) {
+      let operatorSymbols = {
+        isEqual: '=',
+        isNotEqual: '!=',
+        isLessThan: '<',
+        isLessThanOrEqual: '<=',
+        isGreaterThan: '>',
+        isGreaterThanOrEqual: '>='
+      };
 
-    let conditionString = [];
-    for (let key in condition) {
-      conditionString.push(`${mysql.escapeId(key)} ${operatorSymbols[condition[key].operator]} ${mysql.escape(condition[key].value)}`);
+      let conditionString = [];
+      for (let key in condition) {
+        conditionString.push(`${mysql.escapeId(key)} ${operatorSymbols[condition[key].operator]} ${mysql.escape(condition[key].value)}`);
+      }
+      query += ' WHERE ' + conditionString.join(' AND ');
     }
-    query += ' WHERE ' + conditionString.join(' AND ');
-  }
 
-  // Query database
-  connection.query(query, (error, results, fields) => {
-    if (error) throw error;
-    console.log(results);
+    // Query database
+    connection.query(query, (error, results, fields) => {
+      if (error) {
+        reject(error); return; // reject promise if error
+      }
+      resolve(results); // resolve promise with results
+    });
   });
 }
 
