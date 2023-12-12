@@ -23,10 +23,36 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(StaticDirectory, 'index.html'));
 });
 
+// Set up a route to get featured products
+app.get('/api/featuredProducts', async function(req, res) {
+  try {
+    const data = await db.queryProductsTable(['creator', 'name', 'imgName'], {isFeatured: {operator: 'isEqual', value: 1} });
+    res.json(data);
+  } catch (err) {
+    console.error("Failed to query featured products:", err);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
 
-
+// Start the server
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}/`);
 });
+
+// Listen for SIGINT and SIGTERM signals and close the DB connection before exit
+process.on('SIGINT', closeServerAndDatabaseConnection);
+process.on('SIGTERM', closeServerAndDatabaseConnection);
+
+function closeServerAndDatabaseConnection() {
+  // Close the database connection
+  db.closeDatabaseConnection().then(() => {
+    console.log("Disconnected from database");
+    server.close(() => {
+      console.log("Server closed");
+      process.exit(0); // Exit with a zero status code (success)
+    });
+  });
+}
+
 
 console.log(message);
