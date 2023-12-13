@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Category Page</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+  </head>
+
+  <body>
+    <header id="header-container"></header>
+    <nav id="category-nav"></nav>
+
+    <div class="two-section-container">
+      <div class="sidebar-section">
+        <h2>Filter</h2>
+        <div class="filter-price">
+          <h3>Price Range</h3>
+          <a href="#" data-price="10" class="filter-link">Under $10</a>
+          <a href="#" data-price="5" class="filter-link">Under $5</a>
+        </div>
+      </div>
+
+      <div class="product-display-section">
+        <div class="product-display-grid"></div>
+      </div>
+    </div>
+
+    <footer id="footer-container"></footer>
+    <script src="scripts/siteWideHeaderAndFooterGenerator.js"></script>
+    <script src="scripts/filterPageLoaderByType.js"></script>
+    <script src="scripts/filterPageLoaderByPrice.js"></script>
+  </body>
+</html>

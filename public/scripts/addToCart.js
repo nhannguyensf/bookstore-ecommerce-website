@@ -19,54 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updatePriceDisplay();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  var addToCartButton = document.getElementById("addToCartButton");
-  var itemName = document.querySelector(".item-name h1").textContent;
-
-  addToCartButton.addEventListener("click", function () {
-    // Find the selected format
-    var selectedFormat = document.querySelector('input[name="format"]:checked');
-    if (!selectedFormat) {
-      alert("Please select a format.");
-      return;
-    }
-
-    var format = selectedFormat.value;
-    var price = selectedFormat.getAttribute("data-price");
-
-    // Create an object for the cart item
-    var cartItem = {
-      name: itemName,
-      format: format,
-      price: price,
-    };
-
-    // Add the item to the cart (local storage)
-    addToCart(cartItem);
-    // After adding to cart, ask the user if they want to go to the cart page
-    var userChoice = confirm(
-      "You've added an item to your cart. Would you like to view your cart now?"
-    );
-    if (userChoice) {
-      // If user clicks 'OK', redirect to the cart page
-      window.location.href = "cart.html";
-    }
-    // If user clicks 'Cancel', they stay on the current page
-  });
-
-  function addToCart(item) {
-    // Retrieve existing cart from local storage
-    var cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    // Add new item
-    cart.push(item);
-
-    // Save back to local storage
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    alert("Item added to cart!");
-  }
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   var cartItemsContainer = document.getElementById("cartItemsContainer");
