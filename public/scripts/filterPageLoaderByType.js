@@ -57,20 +57,3 @@ fetch('/filter/' + productType)
     console.log("Error: ", error);
     // Handle errors here
   });
-
-/*
-          <div className="item-display">
-            <img
-              src="images/products/gameOfThrones.png"
-              alt="Game of Thrones"
-            />
-            <h2>Game of Thrones</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Lorem ipsum dolor sit amet, Vivamus
-              consectetur.
-            </p>
-            <h3>$xx.xx</h3>
-          </div>
-*/

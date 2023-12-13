@@ -77,6 +77,27 @@ app.get('/filter/:productType', async function(req, res) {
   }
 });
 
+// Set up route to filter page after clicking price filter
+app.get('/filter/price/:productPrice', async function(req, res) {
+  try {
+    const productPrice = parseFloat(req.params.productPrice);
+
+    // Modify the query based on the price range or specific price you want to filter
+    const productData = await db.queryProductsTable(['*'], { price: { operator: 'isLessThanOrEqual', value: [productPrice.toFixed(2)] } });
+
+    if (productData.length > 0) {
+      res.json(productData);
+    } else {
+      res.status(404).json({ message: 'Product not found' });
+    }
+  } catch (err) {
+    console.error("Failed to get product details:", err);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
+
+
+
 // Start the server
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}/`);
