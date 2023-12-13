@@ -81,7 +81,7 @@ fetch(`/api/product/${encodeURIComponent(productName)}`)
       inputEl.setAttribute("data-price", prodItem.price);
 
       labelEl.setAttribute("for", prodItem.type);
-      labelEl.innerText = prodItem.type.charAt(0).toUpperCase() + prodItem.type.slice(1);
+      labelEl.innerText = `${prodItem.type.charAt(0).toUpperCase() + prodItem.type.slice(1)} $${prodItem.price}`;
 
       spanEl.className = "price-display";
       spanEl.id = `${prodItem.type}-price`;
