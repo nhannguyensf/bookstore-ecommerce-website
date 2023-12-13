@@ -39,8 +39,13 @@ app.get("/product-page", function (req, res) {
   res.sendFile(path.join(StaticDirectory, "product-page.html"));
 });
 
-//  Setup route to product page after clicking on a link and passing name as data
-app.get('/api/product/:productName', async function(req, res) {
+// Set up a route to filter-page.html
+app.get("/filter-page", function (req, res) {
+  res.sendFile(path.join(StaticDirectory, "filter-page.html"));
+});
+
+// Set up a route to product page after clicking on a product link and passing its name as data
+app.get('/product/:productName', async function(req, res) {
   try {
     const productName = req.params.productName;
     const productData = await db.queryProductsTable(['*'], {name: {operator: 'isEqual', value: [productName]}});
@@ -55,10 +60,22 @@ app.get('/api/product/:productName', async function(req, res) {
   }
 });
 
-
-
-
-
+// Set up a route to filter page after clicking on a navigation link and passing its product type as data
+app.get('/filter/:productType', async function(req, res) {
+  try {
+    const productType = req.params.productType;
+    const productData = await db.queryProductsTable(['*'], {type: {operator: 'isEqual', value: [productType]}});
+    console.log(productData); // Log the database data here
+    if (productData.length > 0) {
+      res.json(productData);
+    } else {
+      res.status(404).json({ message: 'Product not found' });
+    }
+  } catch (err) {
+    console.error("Failed to get product details:", err);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
 
 // Start the server
 app.listen(port, () => {
@@ -79,6 +96,5 @@ function closeServerAndDatabaseConnection() {
     });
   });
 }
-
 
 console.log(message);

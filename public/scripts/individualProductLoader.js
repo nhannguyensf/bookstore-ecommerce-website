@@ -22,7 +22,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productName = urlParams.get('productName');
 
 // Fetch product details from the server.
-fetch(`/api/product/${encodeURIComponent(productName)}`)
+fetch(`/product/${encodeURIComponent(productName)}`)
   .then(response => {
     if (!response.ok) {
       throw new Error("HTTP error " + response.status);
