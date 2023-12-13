@@ -81,7 +81,7 @@ fetch(`/api/product/${encodeURIComponent(productName)}`)
       inputEl.setAttribute("data-price", prodItem.price);
 
       labelEl.setAttribute("for", prodItem.type);
-      labelEl.innerText = prodItem.type.charAt(0).toUpperCase() + prodItem.type.slice(1);
+      labelEl.innerText = `${prodItem.type.charAt(0).toUpperCase() + prodItem.type.slice(1)} $${prodItem.price}`;
 
       spanEl.className = "price-display";
       spanEl.id = `${prodItem.type}-price`;
@@ -206,54 +206,3 @@ fetch(`/api/product/${encodeURIComponent(productName)}`)
     console.log("Fetch error: Could not load product details");
     productDisplay.textContent = "Could not load product details. Please try again later.";
   });
-
-
-/*
-<div class="product-container page-format">
-  <div class="item-picture">
-    <img
-      class="product-image"
-      src="images/products/[product.imgName].png"
-    />
-  </div>
-  <div class="item-name">
-    <h1>[product.name]</h1>
-  </div>
-  // START iterate through each item and get product.type and product.price, then do the following
-  <div class="item-price">
-    <div class="button-layout">
-      <fieldset class="fieldset-border">
-        <div>
-          <input
-            type="radio"
-            id="[product.type]"
-            value="[product.type]"
-            name="format"
-            data-price="[product.price]"
-          />
-          <label for="[product.type">[product.type]</label>
-          <span class="price-display" id="[product.type]-price"></span>
-        </div>
-      </fieldset>
-    </div>
-  </div>
-  // END need for iteration
-  
-  <div class="item-cart">
-    <button type="button" id="addToCartButton">Add to Cart</button>
-  </div>
-</div>
-<div class="Product-Description page-format">
-  <h2 class="center">Product Overview</h2>
-  <div>
-    <p><u>Book Description</u></p>
-    <p id=book-description>
-      [populate with data.description]
-    </p>
-  </div>
-
-  <br />
-  <p>ISBN: 923014828832</p>
-  <p>Author: [product.creator]</p>
-</div>
-*/
