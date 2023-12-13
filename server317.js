@@ -1,9 +1,10 @@
-var message = 'CSC-317 startup template\n'
-         + 'This template uses nodeJS, express, and express.static\n';
+var message =
+  "CSC-317 startup template\n" +
+  "This template uses nodeJS, express, and express.static\n";
 
 var port = 3000;
-var path = require('path');
-var express = require('express');
+var path = require("path");
+var express = require("express");
 var app = express();
 var StaticDirectory = path.join(__dirname, "public");
 const bcrypt = require("bcrypt");
@@ -56,7 +57,7 @@ app.get("/api/product/:productName", async function (req, res) {
 });
 
 // Route for handling account creation
-app.post('/create_account', async (req, res) => {
+app.post("/create_account", async (req, res) => {
   try {
     const { email, passwd } = req.body;
     const saltRounds = 10;
@@ -65,7 +66,7 @@ app.post('/create_account', async (req, res) => {
     await db.insertUser(email, passwordHash);
     res.status(200).send("Account created successfully");
   } catch (error) {
-    console.error('Account creation failed:', error);
+    console.error("Account creation failed:", error);
     res.status(500).send("Error occurred during account creation");
   }
 });
