@@ -37,3 +37,34 @@ function validateForm(formId) {
 
   return isValid;
 }
+
+document
+  .getElementById("accountCreationForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    fetch("http://localhost:3000/createAccount", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        // handle successful response here
+        console.log("Success:", data);
+        // update the UI to show a success message
+        document.getElementById("responseMessage").textContent =
+          "Account created successfully!";
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // update the UI to show an error message
+        document.getElementById("responseMessage").textContent =
+          "Error creating account. Please try again.";
+      });
+  });

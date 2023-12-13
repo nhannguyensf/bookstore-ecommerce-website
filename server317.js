@@ -7,6 +7,8 @@ var express = require('express');
 var app = express();
 const fs = require('fs');
 const db = require('./database');
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
 var StaticDirectory = path.join(__dirname, 'public');
 
@@ -55,7 +57,29 @@ app.get('/api/product/:productName', async function(req, res) {
   }
 });
 
+// Middleware
+app.use(express.urlencoded({ extended: true }));
 
+// Account creation endpoint
+app.post('/createAccount', (req, res) => {
+    const { email, password } = req.body;
+
+    bcrypt.hash(password, saltRounds, (err, hash) => {
+        if (err) {
+            res.status(500).send('Error hashing password');
+            return;
+        }
+
+        const sql = 'INSERT INTO Users (email, password_hash) VALUES (?, ?)';
+        db.query(sql, [email, hash], (err, result) => {
+            if (err) {
+                res.status(500).send('Error creating account');
+                return;
+            }
+            res.send('Account created successfully');
+        });
+    });
+});
 
 
 
