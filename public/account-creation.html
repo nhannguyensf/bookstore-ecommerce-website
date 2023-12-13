@@ -11,7 +11,11 @@
 
     <div class="account-form">
       <h1>Create Account</h1>
-      <form action="http://localhost:3000/create_account" method="post">
+      <form
+        id="accountCreationForm"
+        method="post"
+        onsubmit="return validateForm('accountCreationForm')"
+      >
         <label for="email">Email:</label>
         <br />
         <span id="emailError" class="error"></span>

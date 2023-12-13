@@ -37,3 +37,14 @@ function validateForm(formId) {
 
   return isValid;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("accountCreationForm");
+  var currentPort = window.location.port || "80"; // Default to port 80 if no port is specified
+  form.action =
+    "http://" +
+    window.location.hostname +
+    ":" +
+    currentPort +
+    "/create_account";
+});
