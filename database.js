@@ -1,23 +1,23 @@
 // Import mysql module
 let mysql = require('mysql');
-let connection;
 
-function connectToDatabase() {
+// Create a pool of connections
+const pool = mysql.createPool({
+  connectionLimit: 10, // You can set the limit as per your application's need
+  host: 'localhost',
+  user: 'student',
+  password: 'student',
+  database: 'ecommerceBookstore'
+});
+
+function insertUser(email, passwordHash) {
   return new Promise((resolve, reject) => {
-    connection = mysql.createConnection({
-      host: 'localhost',
-      user: 'student',
-      password: 'student',
-      database: 'ecommerceBookstore'
-    });
-
-    connection.connect(function (e) {
-      if (e) {
-        console.error('error: ' + e.message);
-        reject(e);  // Reject the promise with the error
+    const query = "INSERT INTO Users (email, password_hash) VALUES (?, ?)";
+    pool.query(query, [email, passwordHash], (error, results, fields) => {
+      if (error) {
+        reject(error);
       } else {
-        console.log('\nConnected to the MySQL server...\n');
-        resolve(); // Resolve the promise as the connection was successful
+        resolve(results);
       }
     });
   });
@@ -46,12 +46,13 @@ function queryProductsTable(parameters, condition) {
       query += ' WHERE ' + conditionString.join(' AND ');
     }
 
-    // Query database
-    connection.query(query, (error, results, fields) => {
+    // Query the database using the pool
+    pool.query(query, (error, results, fields) => {
       if (error) {
-        reject(error); return; // reject promise if error
+        reject(error);
+      } else {
+        resolve(results);
       }
-      resolve(results); // resolve promise with results
     });
   });
 }
@@ -77,16 +78,24 @@ Example Usages:
     SELECT name FROM Products WHERE name != 'Apple'
 */
 
-// Close the database connection
+// Close all connections in the pool
 function closeDatabaseConnection() {
-  connection.end(function () {
-    console.log('\nConnection closed. \n')
+  return new Promise((resolve, reject) => {
+    pool.end(function (err) {
+      if (err) {
+        console.error('Error closing the pool', err);
+        reject(err);
+      } else {
+        console.log('\nAll connections in the pool have been closed.\n');
+        resolve();
+      }
+    });
   });
 }
 
 
 module.exports = {
-  connectToDatabase,
+  insertUser,
   queryProductsTable,
-  closeDatabaseConnection
+  closeDatabaseConnection,
 };

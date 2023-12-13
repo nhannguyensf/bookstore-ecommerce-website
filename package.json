@@ -26,7 +26,11 @@
   },
   "homepage": "https://github.com/WebDev317-03-Fall2023/group-project-2-website-nhannguyensf#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "express-generator": "^4.16.1"
+    "express-generator": "^4.16.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.5"
   }
 }
